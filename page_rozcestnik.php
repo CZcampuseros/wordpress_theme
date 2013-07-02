@@ -23,20 +23,10 @@ Template Name: rozcestnik
 							$file = fopen($to, 'w+');
 							fwrite($file, $data);
 							fclose($file); 
-							/*$ch = curl_init();
-							curl_setopt($ch, CURLOPT_FAILONERROR, true); 
-							curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); 
-							curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
-							curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false); 
-							curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-							curl_setopt($ch, CURLOPT_URL, $from);
-							curl_setopt($ch, CURLOPT_FILE, $file);
-							curl_exec($ch);
-							curl_close($file);*/
 						}
 					}
 					if(!empty($update)) {
-						downloadtocache('http://blog.czcampuseros.eu/?feed=rss2', get_theme_root().'/'.get_template().'/cache/blog.xml');
+						downloadtocache('http://blog.czcampuseros.eu/?feed=rss2', get_theme_root().'/'.get_template().'/../cache/blog.xml');
 					}
 					$channel = (array) simplexml_load_file(get_theme_root().'/'.get_template().'/cache/blog.xml');
 					$itemNO = 0;
@@ -65,7 +55,7 @@ Template Name: rozcestnik
 				<ul>
 				<?php
 					if(!empty($update)) {
-						downloadtocache('http://sdruzeni.czcampuseros.eu/?feed=rss2', get_theme_root().'/'.get_template().'/cache/sdruzeni.xml');
+						downloadtocache('http://sdruzeni.czcampuseros.eu/?feed=rss2', get_theme_root().'/'.get_template().'/../cache/sdruzeni.xml');
 					}
 					$channel = (array) simplexml_load_file(get_theme_root().'/'.get_template().'/cache/sdruzeni.xml');
 					$itemNO = 0;
