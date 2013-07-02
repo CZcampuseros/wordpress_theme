@@ -6,7 +6,7 @@ body>header .banner { display: none; }
 .slickr-flickr-galleria .galleria_container, .slickr-flickr-galleria .galleria_wrapper, .slickr-flickr-galleria .galleria_wrapper img,
 .slickr-flickr-galleria .caption, .slickr-flickr-galleria .description, .slickr-flickr-galleria .galleria { width: 400px; text-align: center; }
 .slickr-flickr-galleria .galleria li { width: 123px; }
-aside { position: static; top: 0px; }
+body>aside { position: static !important; top: 0px !important; width: 400px !important; }
 aside .widget .menu,aside .widget .rotatingtweets,aside .widget .widget_sp_image-image-link img { width: 400px !important; max-width: 400px !important; }
 aside .widget .rotatingtweets { height: 125px; }
 #main .counter .next,#main .counter .previous { width: 100px; }
