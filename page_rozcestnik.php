@@ -28,7 +28,7 @@ Template Name: rozcestnik
 					if(!empty($update)) {
 						downloadtocache('http://blog.czcampuseros.eu/?feed=rss2', get_theme_root().'/'.get_template().'/../cache/blog.xml');
 					}
-					$channel = (array) simplexml_load_file(get_theme_root().'/'.get_template().'/cache/blog.xml');
+					$channel = (array) simplexml_load_file(get_theme_root().'/'.get_template().'/../cache/blog.xml');
 					$itemNO = 0;
 					$count = 0;
 					foreach ($channel['channel'] as $item) {
@@ -57,7 +57,7 @@ Template Name: rozcestnik
 					if(!empty($update)) {
 						downloadtocache('http://sdruzeni.czcampuseros.eu/?feed=rss2', get_theme_root().'/'.get_template().'/../cache/sdruzeni.xml');
 					}
-					$channel = (array) simplexml_load_file(get_theme_root().'/'.get_template().'/cache/sdruzeni.xml');
+					$channel = (array) simplexml_load_file(get_theme_root().'/'.get_template().'/../cache/sdruzeni.xml');
 					$itemNO = 0;
 					$count = 0;
 					foreach ($channel['channel'] as $item) {
