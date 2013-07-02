@@ -1,15 +1,6 @@
 <?php
 	 include('Mobile_Detect.php');
 	 $detect = new Mobile_Detect;
-	 $screentype = trim(htmlspecialchars(htmlspecialchars_decode($_GET['screentype'], ENT_NOQUOTES), ENT_NOQUOTES));
-	 if(!empty($screentype)) { $_SESSION['screentype'] = $screentype; }
-	 if(empty($_SESSION['screentype'])) {
-	 	if($detect->isMobile() && !$detect->isTablet()) {
-	 		$_SESSION['screentype'] = 'mobile';
-		} else {
-	 		$_SESSION['screentype'] = 'desktop';
-	 	}
-	 }
 	 if($detect->isMobile() && !$detect->isTablet()) {
  		$_SESSION['screentype'] = 'mobile';
 	} else {
