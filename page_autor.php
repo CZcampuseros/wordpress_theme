@@ -14,7 +14,8 @@ Template Name: autor
 			<div class="articlecontent">
 				<p><?php the_content(__('(Whole article...)')); ?>
 			</div>
-			<h2 class="headingbigline">Poslední články na blogu</h2>
+			<div class="line"></div>
+			<h2>Poslední články na blogu</h2>
 			<ul>
 			<?php
 				$feed = 'http://blog.czcampuseros.eu/author/'.the_slug().'/feed/';

@@ -16,7 +16,7 @@ html,body,section,header,div,h1,h2,ul,li { margin: 0px; padding: 0px; overflow: 
 /* Body */
 html { background-color: #ededed; font-family: sans-serif, tahoma, verdana, arial; font-size: 13px; overflow: auto; }
 body { width: 1000px; margin: 10px auto; }
-body>header>nav,aside>.widget>h1,#main .twoboxbar h1,article header .line,article header .tags a,#main .counter li span,#main .counter li a,footer {
+body>header>nav,aside>.widget>h1,#main .twoboxbar h1,article .line,article header .tags a,#main .counter li span,#main .counter li a,footer {
 	height: 18px; background-color: #00F; }
 body>header nav span,aside .widget h1,#main .twoboxbar h1,article header .tags a,#main .counter li span,#main .counter li a,footer,footer a {
 	font-weight: bold; font-size: 16px; color: #FFF; }
@@ -76,10 +76,12 @@ body>aside .widget .gflag { margin: 5px 2.5px; }
 article header .author,article header .category,article header .tags { display: block; }
 article header { font-weight: bold; }
 article header h1 { font-size: 1.7em; }
-article header .line { height: 5px; }
 article header .tags a { display: inline-block; padding: 2.5px 5px; margin: 2.5px 5px; border-radius: 25px; }
 
 article .disclaimer { margin: 5px 25px; border-top: 1px solid #000; font-style: italic; }
+
+article .line { height: 5px !important; }
+article>.line { margin-top: 15px; }
 
 article .content .qa-faq-answer>.shareaholic-show-on-load { display: none !important; }
 article .content .qa-faq-title,article .content .qa-category { margin: 5px 0px; }
