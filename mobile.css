@@ -1,12 +1,12 @@
 html { width: 420px; overflow-x: hidden; overflow-y: auto; margin: 0px; padding: 0px; }
 body { width: 400px; overflow: hidden; margin: 10px; }
-#main,aside,nav,header,footer { width: 400px; overflow: hidden; margin: 0px; padding: 0px; }
+#main,aside,nav,header,footer { width: 400px !important; overflow: hidden; margin: 0px; padding: 0px; }
 body>header .banner { display: none; }
 #main iframe,#main .galleria-container,.slickr-flickr-galleria, .slickr-flickr-galleria  .nav,
 .slickr-flickr-galleria .galleria_container, .slickr-flickr-galleria .galleria_wrapper, .slickr-flickr-galleria .galleria_wrapper img,
 .slickr-flickr-galleria .caption, .slickr-flickr-galleria .description, .slickr-flickr-galleria .galleria { width: 400px; text-align: center; }
 .slickr-flickr-galleria .galleria li { width: 123px; }
-aside { position: static; top: 0px; }
+aside { position: static !important; top: 0px !important; }
 aside .widget .menu,aside .widget .rotatingtweets,aside .widget .widget_sp_image-image-link img { width: 400px !important; max-width: 400px !important; }
 aside .widget .rotatingtweets { height: 125px; }
 #main .counter .next,#main .counter .previous { width: 100px; }
