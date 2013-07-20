@@ -33,7 +33,7 @@ body>header nav li { display: inline-block; margin-left: 20px; }
 
 /* Sidebar */
 body>aside { width: 300px; float: right; position: relative; top: -25px; }
-body>aside .widget { overflow: hidden; }
+body>aside .widget, body>aside .widget li, body>aside .widget div { overflow: hidden; }
 body>aside .widget h1 { padding-left: 10px; }
 body>aside .widget ul { margin: 0px; padding: 0px 0px 0px 15px; }
 body>aside .widget li { background-color: #CECECE; margin: 2.5px 5px 0px 0px; padding-right: 15px; }
@@ -50,7 +50,7 @@ body>aside .widget .gflag { margin: 5px 2.5px; }
 /* Main */
 #main { width: 695px; margin-right: 5px;  float: left; }
 #main .widget { background-color: transparent; }
-#main #meteor-slides-widget,#main .mslide img { width: 100%; height: 120px !important; }
+#main #meteor-slides-widget,#main .mslide img { width: 100%; height: 120px !important; overflow: hidden; }
 
 /* Two box */
 #main .twoboxbar { width: 344px; float: left; margin-bottom: 15px; }
@@ -99,7 +99,7 @@ article .content>h3 { font-size: 1.5em; }
 
 /* Counter */
 #main .counter { clear: both; text-align: center; margin: 15px 0px; }
-#main .counter li { display: inline-block; }
+#main .counter li { display: inline-block; overflow: hidden; }
 #main .counter a { padding: 5px 5px; }
 
 #main .counter .previousarticle { float: left; }

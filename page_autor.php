@@ -16,7 +16,7 @@ Template Name: autor
 			</div>
 			<div class="line"></div>
 			<h2>Poslední články na blogu</h2>
-			<ul>
+			<ul style="list-style-type: none;">
 			<?php
 				$feed = 'http://blog.czcampuseros.eu/author/'.the_slug().'/feed/';
 				$channel = (array) simplexml_load_file($feed);
