@@ -98,7 +98,7 @@ article .content>h2 { font-size: 2.0em; }
 article .content>h3 { font-size: 1.5em; }
 
 /* Counter */
-#main .counter { clear: both; text-align: center; margin: 15px 0px; }
+#main .counter { clear: both; text-align: center; margin: 15px 0px; overflow: hidden; }
 #main .counter li { display: inline-block; overflow: hidden; }
 #main .counter a { padding: 5px 5px; }
 
