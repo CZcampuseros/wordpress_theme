@@ -87,6 +87,7 @@ article>.line { margin-top: 15px; }
 article .content .qa-faq-answer>.shareaholic-canvas { display: none !important; }
 article .content .qa-faq-title,article .content .qa-category { margin: 5px 0px; }
 article .content .qa-faq-title a { text-decoration: none; }
+article .content table { border: 0px solid #000; border-spacing: 0px; border-collapse: collapse; }
 
 article .shareaholic-canvas { margin: 0px auto; width: 225px; }
 .shareaholic-tipsy { display: none !important; }
