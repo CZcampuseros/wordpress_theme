@@ -17,12 +17,17 @@
 			if($count == 4) { $count = 0; }
 ?>
 		<li id="<?php echo the_ID(); ?>" class="threebox"
-			style="background-color: <?php echo $color; ?>; border-color: <?php echo $color; ?>;"
+			style="
+				background-color: <?php echo $color; ?>;
+				border-color: <?php echo $color; ?>;
+			"
 			onClick="location.href='<?php the_permalink(""); ?>'"
 			onMouseOver="changeColorON('<?php echo the_ID(); ?>', '#fff');"
 			onMouseOut="changeColorOUT('<?php echo the_ID(); ?>', '<?php echo $color; ?>');">
 				<span class="date"><?php the_time('d. m. Y'); ?></span>
-				<a href="<?php the_permalink(""); ?>"><h1 class="title"><?php the_title(); ?></h1></a>
+				<a href="<?php the_permalink(""); ?>">
+					<h1 class="title" <?php if(preg_match('/^(TIP|Speakers): /', get_the_title())) { echo "style=\"text-transform: none;\""; } ?>><?php the_title(); ?></h1>
+				</a>
 				<div class="content"><?php echo strip_tags(get_the_content('(...)')); ?></div>
 		</li>
 <?php
