@@ -7,18 +7,18 @@ Template Name: about
 	include('header.php');
 	include('sidebar.php');
 
-	$pages = get_pages(array('child_of' => '0'));
+	$pages = get_pages(array('sort_column' => 'menu_order', 'child_of' => '0'));
 	foreach ( $pages as $page ) {
-		if ($page->post_title == 'Team1' or $page->post_title=='Team2') $listofpages[] = $page->ID;
+		if ($page->post_title == 'Team 1' or $page->post_title=='Team 2' or $page->post_title=='Externí spolupracovníci') $listofpages[] = $page;
 	}
 ?>
 		<section id="main">
 			<?php dynamic_sidebar( 'main1' ); ?>
 			<?php $counter = 0; foreach($listofpages as $teamlist) { $counter++; ?>
 			<section id="about<?php echo $counter; ?>" class="twoboxbar widget about">
-				<h1>Team<?php echo $counter; ?></h1>
+				<h1><?php echo $teamlist->post_title; ?></h1>
 				<ul>
-					<?php $pages = get_pages(array('sort_column' => 'menu_order', 'child_of' => $teamlist)); $count = 0; foreach ( $pages as $page ) { $thiscolor = getrandcolor($count); $count++; if($count == 4) { $count = 0; } ?>
+					<?php $pages = get_pages(array('sort_column' => 'menu_order', 'child_of' => $teamlist->ID)); $count = 0; foreach ( $pages as $page ) { $thiscolor = getrandcolor($count); $count++; if($count == 4) { $count = 0; } ?>
 						<li><a href="<?php echo get_page_link( $page->ID ); ?>"
 							id="rsswidget<?php echo $counter; ?>item<?php echo $page->ID; ?>" class="twobox rsswidget"
 							style="background-color: <?php echo $thiscolor; ?>; border-color: <?php echo $thiscolor; ?>;"
