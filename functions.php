@@ -9,8 +9,8 @@
 
     function the_slug() { $post_data = get_post($post->ID, ARRAY_A); $slug = $post_data['post_name']; return $slug; }
 
-    function my_function_admin_bar() { return false; }
-    add_filter( 'show_admin_bar' , 'my_function_admin_bar');
+    //function my_function_admin_bar() { return false; }
+    //add_filter( 'show_admin_bar' , 'my_function_admin_bar');
 
     function new_excerpt_more($more) { return '...'; }
     add_filter( 'excerpt_more', 'new_excerpt_more' );
