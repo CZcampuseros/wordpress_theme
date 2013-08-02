@@ -63,8 +63,8 @@ body>aside .widget .gflag { margin: 5px 2.5px; }
 #main .twoboxbar.about li a { height: 90px; padding: 0px; text-align: left; }
 #main .twoboxbar.about img { margin: 15px 15px 0px 15px; width: 50px; height: 50px; }
 #main .twoboxbar.about span { margin-top: 25px !important; width: 245px; float: right; font-size: 0.75em; }
-#main .twoboxbar.about#about1 { float: left; }
-#main .twoboxbar.about#about2 { float: right; }
+#main .twoboxbar.about#about1,#main .twoboxbar.about#about3 { float: left; }
+#main .twoboxbar.about#about2,#main .twoboxbar.about#about4 { float: right; }
 
 /* Three box */
 #main .threebox { width: 231px; height: 231px; cursor: pointer; float: left; overflow: hidden; }
