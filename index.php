@@ -4,7 +4,11 @@
 ?>
 <section id="main">
 <?php
+	$cat_name = 'Speakers 2013';
+	$term = get_term_by('name', $cat_name, 'category');
+	$featured_id =  $term->term_id;
 	dynamic_sidebar( 'main1' );
+	query_posts($query_string . '&cat=-'.$featured_id);
 	if (have_posts()) {
 ?>
 	<ul class="widget">
@@ -12,16 +16,9 @@
 		$count = rand(0, 3);
 		while (have_posts()) {
 			the_post();
-			$deny = 0;
-			foreach (get_the_category() as $category) {
-				if ($category->name == 'Speakers 2013') {
-					$deny = 1;
-				}
-			}
-			if (isset($deny)) {
-				$color = getrandcolor($count);
-				$count++;
-				if($count == 4) { $count = 0; }
+			$color = getrandcolor($count);
+			$count++;
+			if($count == 4) { $count = 0; }
 ?>
 		<li id="<?php echo the_ID(); ?>" class="threebox"
 			style="
@@ -38,7 +35,6 @@
 				<div class="content"><?php echo strip_tags(get_the_content('(...)')); ?></div>
 		</li>
 <?php
-			}
 		}
 ?>
 	</ul>
