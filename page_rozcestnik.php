@@ -32,7 +32,7 @@ Template Name: rozcestnik
 					$itemNO = 0;
 					$count = 0;
 					foreach ($channel['channel'] as $item) {
-						if ( !empty($item->link) and $itemNO < 3 ) {
+						if ( !empty($item->link) and $itemNO < 3 and !preg_match('/^Speakers\: .*/i', $$item->title) ) {
 							$itemNO++;
 							$thiscolor = getrandcolor($count);
 							$count++;
