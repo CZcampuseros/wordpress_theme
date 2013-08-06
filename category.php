@@ -12,16 +12,9 @@
 		$count = rand(0, 3);
 		while (have_posts()) {
 			the_post();
-			$deny = 0;
-			foreach (get_the_category() as $category) {
-				if ($category->name == 'Speakers 2013') {
-					$deny = 1;
-				}
-			}
-			if ($deny == 0) {
-				$color = getrandcolor($count);
-				$count++;
-				if($count == 4) { $count = 0; }
+			$color = getrandcolor($count);
+			$count++;
+			if($count == 4) { $count = 0; }
 ?>
 		<li id="<?php echo the_ID(); ?>" class="threebox"
 			style="
@@ -38,7 +31,6 @@
 				<div class="content"><?php echo strip_tags(get_the_content('(...)')); ?></div>
 		</li>
 <?php
-			}
 		}
 ?>
 	</ul>
