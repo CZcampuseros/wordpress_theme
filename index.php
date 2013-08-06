@@ -18,7 +18,7 @@
 					$deny = 1;
 				}
 			}
-			if ($deny == 0) {
+			if (isset($deny)) {
 				$color = getrandcolor($count);
 				$count++;
 				if($count == 4) { $count = 0; }
