@@ -31,7 +31,13 @@
 			<h1><a href="<?php the_permalink(""); ?>"><?php the_title(); ?></a></h1>
 			<div class="line"></div>
 			<span class="author">Vydal/a: <?php the_author_posts_link(); ?></span>
-			<span class="category">Kategorie: <?php the_category(', '); ?></span>
+			<span class="category">
+				<?php
+					//the_category(', ');
+					foreach(get_the_category() as $cat) { $categories .= $cat->term_id.','; }
+					wp_list_categories(array('include' => $categories, 'style' => 'none')); 
+				?>
+			</span>
 			<span class="tags"><?php the_tags('', '', ''); ?></span>
 		</header>
 	<?php } else { ?>

@@ -16,9 +16,9 @@ html,body,section,header,div,h1,h2,ul,li { margin: 0px; padding: 0px; }
 /* Body */
 html { background-color: #ededed; font-family: sans-serif, tahoma, verdana, arial; font-size: 13px; overflow: auto; }
 body { width: 1000px; margin: 10px auto; }
-body>header>nav,aside>.widget>h1,#main .twoboxbar h1,article .line,article header .tags a,#main .counter li span,#main .counter li a,footer {
+body>header>nav,aside>.widget>h1,#main .twoboxbar h1,article .line,article header .tags a,article header .category a,#main .counter li span,#main .counter li a,footer,article .faq-catname {
 	height: 18px; background-color: #00F; }
-body>header nav span,aside .widget h1,#main .twoboxbar h1,article header .tags a,#main .counter li span,#main .counter li a,footer,footer a {
+body>header nav span,aside .widget h1,#main .twoboxbar h1,article header .tags a,article header .category a,#main .counter li span,#main .counter li a,footer,footer a,article .faq-catname {
 	font-weight: bold; font-size: 16px; color: #FFF; }
 article header a,body>header nav a,#main .counter a { color: #000; text-decoration: none; }
 
@@ -77,7 +77,9 @@ body>aside .widget .gflag { margin: 5px 2.5px; }
 article header .author,article header .category,article header .tags { display: block; }
 article header { font-weight: bold; }
 article header h1 { font-size: 1.7em; }
-article header .tags a { display: inline-block; padding: 2.5px 5px; margin: 2.5px 5px; border-radius: 25px; }
+article header .tags a,article header .category a,article .faq-catname { display: inline-block; padding: 2.5px 5px; margin: 2.5px 5px; border-radius: 25px; }
+article header .category a,article .faq-catname { background-color: #000; color: #fff; }
+article header .category br { display: none; }
 
 article .disclaimer { margin: 5px 25px; border-top: 1px solid #000; font-style: italic; }
 
